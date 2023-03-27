@@ -1,0 +1,53 @@
+{% extends 'invoiced/base.html' %} {% load static %} {% block content %}
+
+<!-- Invoice form -->
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <h3 class="text-center mb-4">Login Form</h3>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %} {{form.as_p}}
+        <!-- <div class="mb-3">
+              <label for="formFile" class="form-label">Upload invoice:</label>
+              <input class="form-control" type="file" id="formFile" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="invoiceNumber" class="form-label"
+                >Invoice Number:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="invoiceNumber"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="clientNumber" class="form-label"
+                >Client Number:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="clientNumber"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="dateOfScanning" class="form-label"
+                >Date of Scanning:</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="dateOfScanning"
+                required
+              />
+            </div> -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
