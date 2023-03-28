@@ -26,9 +26,9 @@ SECRET_KEY = 'django-insecure-f%=uf@a=tmhp6(al&xyi)!%ac*ig--gamp!$*%h&x^*kjsa&y$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['invoicesaver-production.up.railway.app']
+ALLOWED_HOSTS = ['*']
 
-
+CSRF_TRUSTED_ORIGINS = ['https://invoicesaver-production.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
