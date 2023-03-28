@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import UploadInvoiceForm
 from .models import Invoice
 
@@ -20,7 +20,7 @@ def upload(request):
         form = UploadInvoiceForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponse("Template for submitted")
+            return redirect('home')
     else:
         form = UploadInvoiceForm()
         context =  {"form": form}
